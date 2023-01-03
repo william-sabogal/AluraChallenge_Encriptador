@@ -64,6 +64,5 @@ input, button{
     font-family: 'Inter', sans-serif;
     height: 80vh;
     margin: auto;
-    text-align: justify;
-    width: 80%;
+    width: 90%;
 }

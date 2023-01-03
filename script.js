@@ -1,34 +1,34 @@
 
 function encryptContent(){  
+    let output = document.getElementById("output-message");
+    output.innerHTML='';
     let input = document.getElementById('input-message').value.toLowerCase();  
     let inputArray = input.split('');
     let outputArray = [];
+    let outputMessage ='';
     inputArray.forEach(letter => {
         switch (letter) {
             case 'e':
-                outputArray.push('enter')
+                outputMessage+='enter';
                 break;
             case 'i':
-                outputArray.push('imes')
+                outputMessage+='imes';
                 break;
             case 'a':
-                outputArray.push('ai')
+                outputMessage+='ai';
                 break;
             case 'o':
-                outputArray.push('ober')
+                outputMessage+='ober';
                 break;
             case 'u':
-                outputArray.push('ufat')
+                outputMessage+='ufat';
                 break;
             default:
-                outputArray.push(letter)
+                outputMessage+=letter;
                 break;
         }        
     });
-    let output = document.getElementById("output-message");
-    outputArray.forEach(element => {
-        output.innerText+= element;
-    });        
+    output.innerHTML=outputMessage;      
 }
 
 function unEncryptContent(){  
