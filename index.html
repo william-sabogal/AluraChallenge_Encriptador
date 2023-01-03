@@ -6,28 +6,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="reset.css">
     <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
     <title>Encriptador</title>
 </head>
 <body>
     <main>
         <div id="input">
-            <img src="/images/Vector.png" alt="logo-alula-a">
-            <form action="submit" method="post">
-                <fieldset>
-                    <div id="text-area">
-                        <textarea name="text-input" id="input-message" cols="30" rows="10"
-                        placeholder="Escriba el texto aquí..."></textarea>
-                    </div>                    
-                    <div id="input-buttons">
-                        <input type="submit" value="Encriptar" id="encriptar">
-                        <input type="submit" value="Desencriptar" id="desencriptar">
-                    </div>
-                </fieldset>
-            </form>
+            <img src="/images/Vector.png" alt="logo-alula-a">          
+            <div id="text-area">
+                <textarea name="text-input" id="input-message" cols="30" rows="10"
+                placeholder="Escriba el texto aquí..."></textarea>
+            </div>                    
+            <div id="input-buttons">
+                <button type="submit" id="encriptar" onclick="encryptContent()">Encriptar</button>
+                <button type="submit" id="desencriptar" onclick="unEncryptContent()">Desencriptar</button>
+            </div>           
         </div>
         <div id="output">
-            <p id="output-message">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aliquam odit iure quis nulla ab magnam voluptate neque laboriosam recusandae animi, ipsum possimus beatae atque nam labore veritatis impedit autem laborum consequatur, iusto error quidem eum architecto nihil? Quibusdam aut corporis suscipit aspernatur?</p>
-            <input type="button" value="Copiar">
+            <p id="output-message"></p>
+            <button type="submit" onclick="copyContent()">Copiar</button>
         </div>
     </main>
 </body>
