@@ -12,9 +12,22 @@
     <main>
         <div id="input">
             <img src="/images/Vector.png" alt="logo-alula-a">
+            <form action="submit" method="post">
+                <fieldset>
+                    <div id="text-area">
+                        <textarea name="text-input" id="input-message" cols="30" rows="10"
+                        placeholder="Escriba el texto aquí..."></textarea>
+                    </div>                    
+                    <div id="input-buttons">
+                        <input type="submit" value="Encriptar" id="encriptar">
+                        <input type="submit" value="Desencriptar" id="desencriptar">
+                    </div>
+                </fieldset>
+            </form>
         </div>
         <div id="output">
-
+            <p id="output-message">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aliquam odit iure quis nulla ab magnam voluptate neque laboriosam recusandae animi, ipsum possimus beatae atque nam labore veritatis impedit autem laborum consequatur, iusto error quidem eum architecto nihil? Quibusdam aut corporis suscipit aspernatur?</p>
+            <input type="button" value="Copiar">
         </div>
     </main>
 </body>
