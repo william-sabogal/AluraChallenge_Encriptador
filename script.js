@@ -34,37 +34,11 @@ function unEncryptContent(){
     let output = document.getElementById("output-message");
     output.innerHTML='';
     let input = document.getElementById('input-message').value.toLowerCase();
-    let outputMessage ='';
-    let outputArray = new Array(input.length).fill('');
     let words = ['enter', 'imes', 'ai', 'ober', 'ufat'];
-    let letters = ['a','e','i','o','u'];
-    let wordIndex = -1;
-    words.forEach(word => {
-        wordIndex = input.includes(word);
-        while (wordIndex != -1) {
-            switch (word) {
-                case 'enter':
-                    outputArray.splice(wordIndex,1,'e');
-                    break;
-                case 'imes':
-                    outputArray.splice(wordIndex,1,'i');
-                    break;
-                case 'ai':
-                    outputArray.splice(wordIndex,1,'a');
-                    break;
-                case 'ober':
-                    outputArray.splice(wordIndex,1,'o');
-                    break;
-                case 'ufat':
-                    outputArray.splice(wordIndex,1,'u');
-                    break;
-                default:
-                    break;
-            }  
-        }        
-        wordIndex = input.includes(word,wordIndex++)         
+    words.forEach(word => {  
+       input = input.replaceAll(word,word.charAt(0));
     });
-    output.innerHTML=outputArray.toString();
+    output.innerHTML=input; 
 }
 
 function copyContent() {
