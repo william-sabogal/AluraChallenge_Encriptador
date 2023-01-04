@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+    <title>Encriptador</title>
+</head>
+<body>
+    <main>
+        <div id="input">
+            <img src="/images/Vector.png" alt="logo-alula-a">          
+            <div id="text-area">
+                <textarea name="text-input" id="input-message" cols="30" rows="10"
+                placeholder="Escriba el texto aquí..."></textarea>
+            </div>                    
+            <div id="input-buttons">
+                <button type="submit" id="encriptar" onclick="encryptContent()">Encriptar</button>
+                <button type="submit" id="desencriptar" onclick="unEncryptContent()">Desencriptar</button>
+            </div>           
+        </div>
+        <div id="output">
+            <p id="output-message"></p>
+            <button type="submit" onclick="copyContent()">Copiar</button>
+        </div>
+    </main>
+</body>
+</html>
